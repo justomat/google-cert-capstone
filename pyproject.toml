@@ -1,0 +1,27 @@
+[project]
+name = "capstone"
+version = "0.1.0"
+description = "Add a short description here"
+authors = [{name = "Geraldi Sutanto", email = "geraldi.sutanto@outlook.com"}]
+requires-python = ">= 3.11"
+dependencies = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+[tool.pixi.pypi-dependencies]
+capstone = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+notebook = ">=7.2.1,<7.3"
+pandas = ">=2.2.2,<2.3"
+numpy = ">=2.0.1,<2.1"
+seaborn = ">=0.13.2,<0.14"
+scikit-learn = ">=1.5.1,<1.6"
